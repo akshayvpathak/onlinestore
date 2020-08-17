@@ -1,0 +1,10 @@
+bootstrap:
+  version: 4.4.1
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+  js:
+    js/bootstrap.min.js: {}
+    js/popper.min.js: {}
+  dependencies:
+    - core/jquery

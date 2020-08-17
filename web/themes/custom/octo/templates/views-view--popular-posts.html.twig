@@ -1,0 +1,65 @@
+<div class="tabs">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#popularPosts" data-toggle="tab"><i class="fa fa-star"></i> {{ 'Popular'|t }}</a></li>
+        <li><a href="#recentPosts" data-toggle="tab">{{ 'Recent'|t }}</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+        {% if header %}
+            <div class="view-header">
+                {{ header }}
+            </div>
+        {% endif %}
+
+        {% if exposed %}
+            <div class="view-filters">
+                {{ exposed }}
+            </div>
+        {% endif %}
+
+        {% if attachment_before %}
+            <div class="attachment attachment-before">
+                {{ attachment_before }}
+            </div>
+        {% endif %}
+
+        {% if rows %}
+            <div class="tab-pane active" id="popularPosts">
+                {{ rows }}
+            </div>
+        {% elseif empty %}
+            <div class="view-empty">
+                {{ empty }}
+            </div>
+        {% endif %}
+
+        {% if pager %}
+            {{ pager }}
+        {% endif %}
+
+        {% if attachment_after %}
+            <div class="attachment attachment-after">
+                {{ attachment_after }}
+            </div>
+        {% endif %}
+
+        {% if more %}
+            {{ more }}
+        {% endif %}
+
+        {% if footer %}
+            <div class="tab-pane" id="recentPosts">
+                {{ footer }}
+            </div>
+        {% endif %}
+
+        {% if feed_icons %}
+            <div class="feed-icons">
+                {{ feed_icons }}
+            </div>
+        {% endif %}
+    </div>
+
+</div>

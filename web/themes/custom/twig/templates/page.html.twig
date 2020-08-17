@@ -1,0 +1,90 @@
+<header class="header bg-light">
+  <div class ="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        {{ page.header_one }}
+      </div>
+      <div class="col-md-5">
+        {{ page.header_two }}
+      </div>
+      <div class="col-md-3">
+        {{ page.header_three }}
+      </div>
+       <div class="col-md-2">
+        {{ page.header_four }}
+      </div>
+    </div>
+  </div>
+</header>
+  
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+  <footer id="footer" role="contentinfo">
+
+    <div class="container-fluid main-footer">
+      <div class="row">
+
+        <div class="col-md-4">
+          {{ page.footer_first }}
+        </div>
+
+        <div class="col-md-4">
+          {{ page.footer_second }}
+        </div>
+
+        <div class="col-md-4">
+          {{ page.footer_third }}
+        </div>
+
+      </div>
+    </div>
+
+
+  <div class="footer-copyright">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-md-8">
+          {% if page.footer_bottom_left %}
+            {{ page.footer_bottom_left }}
+          {% endif %}
+        </div>
+
+        <div class="col-md-4">
+          {% if page.footer_bottom_right %}
+            {{ page.footer_bottom_right }}
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </footer>
