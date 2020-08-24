@@ -2,9 +2,16 @@ bootstrap:
   version: 4.4.1
   css:
     theme:
-      css/bootstrap.min.css: {}
+      vendor/bootstrap/css/bootstrap.min.css: {}
   js:
-    js/bootstrap.min.js: {}
-    js/popper.min.js: {}
+    vendor/bootstrap/js/bootstrap.min.js: {}
+    vendor/bootstrap/js/popper.min.js: {}
   dependencies:
-    - core/jquery
+    - core/
+base:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/twig.js: {}

@@ -5,6 +5,7 @@ core: 8.x
 base theme: false
 libraries:
  - twig/bootstrap
+ - twig/base
 regions:
   header_one: 'Header One'
   header_two: 'Header Two'
