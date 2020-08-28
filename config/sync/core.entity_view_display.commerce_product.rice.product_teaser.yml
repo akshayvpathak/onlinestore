@@ -1,0 +1,61 @@
+uuid: f0199272-c798-4ea5-a8ed-0f886d5a4609
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rice
+    - core.entity_view_mode.commerce_product.product_teaser
+    - field.field.commerce_product.rice.field_brand
+    - field.field.commerce_product.rice.field_categories
+    - field.field.commerce_product.rice.field_description
+    - field.field.commerce_product.rice.field_disclaimer
+    - field.field.commerce_product.rice.field_discount_percentage
+    - field.field.commerce_product.rice.field_key_features
+    - field.field.commerce_product.rice.field_marketed_by
+    - field.field.commerce_product.rice.field_product_reference
+    - field.field.commerce_product.rice.field_seller
+    - field.field.commerce_product.rice.field_shelf_life
+    - field.field.commerce_product.rice.field_unit
+  module:
+    - commerce_product
+    - field_layout
+    - layout_builder
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: commerce_product.rice.product_teaser
+targetEntityType: commerce_product
+bundle: rice
+mode: product_teaser
+content:
+  variations:
+    type: commerce_add_to_cart
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_brand: true
+  field_categories: true
+  field_description: true
+  field_disclaimer: true
+  field_discount_percentage: true
+  field_key_features: true
+  field_marketed_by: true
+  field_product_reference: true
+  field_seller: true
+  field_shelf_life: true
+  field_unit: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  title: true
+  uid: true

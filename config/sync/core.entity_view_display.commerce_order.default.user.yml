@@ -1,0 +1,236 @@
+uuid: cc870d50-5705-4d66-a2b5-546df1f48a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.default
+    - core.entity_view_mode.commerce_order.user
+  module:
+    - commerce_order
+    - entity_reference_revisions
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - options
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2a577d14-e32d-4a1b-8f2f-910d6a6c9136:
+            uuid: 2a577d14-e32d-4a1b-8f2f-910d6a6c9136
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:billing_profile'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          23a3f43f-05cc-4ee5-8562-4b0fddb61ff5:
+            uuid: 23a3f43f-05cc-4ee5-8562-4b0fddb61ff5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:order_number'
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          03542924-7958-483f-b548-bf56845bf095:
+            uuid: 03542924-7958-483f-b548-bf56845bf095
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:mail'
+              formatter:
+                label: inline
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          13639881-b4c3-46be-acb9-44ddc11cfc87:
+            uuid: 13639881-b4c3-46be-acb9-44ddc11cfc87
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:completed'
+              formatter:
+                label: inline
+                type: timestamp
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          760faf61-1ebb-4fbd-ae3b-ebe16f224576:
+            uuid: 760faf61-1ebb-4fbd-ae3b-ebe16f224576
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:placed'
+              formatter:
+                label: inline
+                type: timestamp
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          b1a4e1b6-5fc7-4354-b106-c3407ac7efc4:
+            uuid: b1a4e1b6-5fc7-4354-b106-c3407ac7efc4
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:state'
+              formatter:
+                type: list_default
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          20b0d460-850c-4f0e-b52d-7ab3343ae7dc:
+            uuid: 20b0d460-850c-4f0e-b52d-7ab3343ae7dc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:order_items'
+              formatter:
+                type: commerce_order_item_table
+                settings: {  }
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 6
+          6466caa5-2214-4d61-bdc7-60a741076b78:
+            uuid: 6466caa5-2214-4d61-bdc7-60a741076b78
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order:default:total_price'
+              formatter:
+                type: commerce_order_total_summary
+                settings: {  }
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 7
+        third_party_settings: {  }
+_core:
+  default_config_hash: XRgGhXKcDeqhvgwHROyCDmRx7wfApZmGqxYl_9fE7SU
+id: commerce_order.default.user
+targetEntityType: commerce_order
+bundle: default
+mode: user
+content:
+  billing_profile:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  completed:
+    label: inline
+    type: timestamp
+    weight: 2
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    region: content
+  mail:
+    label: inline
+    type: basic_string
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  order_items:
+    type: commerce_order_item_table
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+    region: content
+  order_number:
+    type: string
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  placed:
+    label: inline
+    type: timestamp
+    weight: 3
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    region: content
+  state:
+    type: list_default
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  total_price:
+    type: commerce_order_total_summary
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+    region: content
+hidden:
+  changed: true
+  ip_address: true
+  search_api_excerpt: true
+  store_id: true
+  total_paid: true
+  uid: true

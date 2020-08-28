@@ -1,0 +1,23 @@
+uuid: 2c82b6fe-38a8-4382-88a2-c61a7e2c780d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.rice
+    - field.storage.commerce_product_variation.field_old_price
+  module:
+    - commerce_price
+id: commerce_product_variation.rice.field_old_price
+field_name: field_old_price
+entity_type: commerce_product_variation
+bundle: rice
+label: 'old price'
+description: "old price \r\nEnter if discount is set"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - INR
+field_type: commerce_price

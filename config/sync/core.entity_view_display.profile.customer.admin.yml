@@ -1,0 +1,87 @@
+uuid: b7dfcc85-144c-40ed-b43b-7b059917d5e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.admin
+    - field.field.profile.customer.address
+    - field.field.profile.customer.tax_number
+    - profile.type.customer
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - address
+    - commerce_tax
+    - field_layout
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ecfae678-4f7b-41af-aa20-ca64750c08a3:
+            uuid: ecfae678-4f7b-41af-aa20-ca64750c08a3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:profile:customer:address'
+              formatter:
+                type: address_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          9e0bd397-89c0-4dc5-8ca2-17a477dba80a:
+            uuid: 9e0bd397-89c0-4dc5-8ca2-17a477dba80a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:profile:customer:tax_number'
+              formatter:
+                type: commerce_tax_number_default
+                settings:
+                  show_verification: true
+                label: above
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+_core:
+  default_config_hash: YIL4nZ3a2ByhSU7C9ITZYsmB6l3GSsvLyGlwNF1_hW4
+id: profile.customer.admin
+targetEntityType: profile
+bundle: customer
+mode: admin
+content:
+  address:
+    type: address_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  tax_number:
+    type: commerce_tax_number_default
+    settings:
+      show_verification: true
+    weight: 1
+    label: above
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

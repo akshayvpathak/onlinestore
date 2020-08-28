@@ -1,0 +1,10 @@
+uuid: d946eb25-5f52-4338-b59e-7b5b1737a7fb
+langcode: en
+status: true
+dependencies: {  }
+id: ghee_vanaspati
+label: 'Ghee & Vanaspati'
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false

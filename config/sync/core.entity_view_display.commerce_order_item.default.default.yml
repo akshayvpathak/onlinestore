@@ -1,0 +1,174 @@
+uuid: d846b7f1-85aa-46fc-96dd-031de292aa4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.default
+  enforced:
+    module:
+      - commerce_product
+  module:
+    - commerce_price
+    - field_layout
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b654a6ff-4e72-480c-97ed-0295dbf9a597:
+            uuid: b654a6ff-4e72-480c-97ed-0295dbf9a597
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order_item:default:created'
+              formatter:
+                label: hidden
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          11e8e5d4-82bf-4507-a51e-60f3e2e8eecc:
+            uuid: 11e8e5d4-82bf-4507-a51e-60f3e2e8eecc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order_item:default:purchased_entity'
+              formatter:
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+                label: above
+            additional: {  }
+            weight: 1
+          76c58579-692a-4511-8b8d-7a744bebee89:
+            uuid: 76c58579-692a-4511-8b8d-7a744bebee89
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order_item:default:quantity'
+              formatter:
+                type: number_decimal
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+                label: above
+            additional: {  }
+            weight: 2
+          a35a144c-4572-4a4f-9e8b-de076c2000c6:
+            uuid: a35a144c-4572-4a4f-9e8b-de076c2000c6
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order_item:default:unit_price'
+              formatter:
+                type: commerce_price_default
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+                label: above
+            additional: {  }
+            weight: 3
+          66fc8900-a1ff-41b2-8a72-31388a132448:
+            uuid: 66fc8900-a1ff-41b2-8a72-31388a132448
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_order_item:default:total_price'
+              formatter:
+                type: commerce_price_default
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+                label: above
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
+_core:
+  default_config_hash: a-MK2hTebnM3YwCg08ZKg7ItNkBUOsu3am_y0HIjTw8
+id: commerce_order_item.default.default
+targetEntityType: commerce_order_item
+bundle: default
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  purchased_entity:
+    type: entity_reference_entity_view
+    weight: 0
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    label: above
+    region: content
+  quantity:
+    type: number_decimal
+    weight: 1
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    label: above
+    region: content
+  total_price:
+    type: commerce_price_default
+    weight: 3
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    label: above
+    region: content
+  unit_price:
+    type: commerce_price_default
+    weight: 2
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    label: above
+    region: content
+hidden:
+  adjustments: true
+  search_api_excerpt: true

@@ -1,0 +1,22 @@
+uuid: b3c74581-b104-43c9-b2da-689610aa8bbc
+langcode: en
+status: true
+dependencies: {  }
+name: product
+label: Product
+effects:
+  e2a9cb9f-fc60-4509-a9d0-f6f2bd08ea2f:
+    uuid: e2a9cb9f-fc60-4509-a9d0-f6f2bd08ea2f
+    id: image_resize
+    weight: 1
+    data:
+      width: 800
+      height: 600
+  d507932a-fb2d-4e73-b513-9bfa28ae7918:
+    uuid: d507932a-fb2d-4e73-b513-9bfa28ae7918
+    id: image_scale
+    weight: 2
+    data:
+      width: 400
+      height: 300
+      upscale: true

@@ -1,0 +1,23 @@
+uuid: 44f73a9e-dce0-4a8f-a2c5-402f07ae824e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.facet_cat
+  module:
+    - facets
+  theme:
+    - bartik
+id: facetcat
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:facet_cat'
+settings:
+  id: 'facet_block:facet_cat'
+  label: 'facet cat'
+  provider: facets
+  label_display: visible
+  block_id: facetcat
+visibility: {  }

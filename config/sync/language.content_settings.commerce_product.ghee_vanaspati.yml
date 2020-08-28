@@ -1,0 +1,11 @@
+uuid: bbb1f6f2-cedb-43ad-a90b-7b9916e7c03f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.ghee_vanaspati
+id: commerce_product.ghee_vanaspati
+target_entity_type_id: commerce_product
+target_bundle: ghee_vanaspati
+default_langcode: site_default
+language_alterable: false

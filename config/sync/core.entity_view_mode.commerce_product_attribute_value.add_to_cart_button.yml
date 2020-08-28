@@ -1,0 +1,10 @@
+uuid: 4226ea2b-4bf6-4175-99a4-a4795e4f7610
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_attribute_value.add_to_cart_button
+label: 'add to cart button'
+targetEntityType: commerce_product_attribute_value
+cache: true

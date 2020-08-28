@@ -1,0 +1,20 @@
+uuid: 0e6fbc5a-1f96-4e35-88a4-36fe9895a6dd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - twig
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: twig_local_actions
+theme: twig
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

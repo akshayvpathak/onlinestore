@@ -1,0 +1,7 @@
+uuid: 55d060db-8b8a-4945-a927-30486b7b8192
+langcode: en
+status: true
+dependencies: {  }
+id: weight
+label: 'Available in'
+elementType: select

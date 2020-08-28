@@ -1,0 +1,12 @@
+uuid: 5eba7778-26f3-45d5-8a59-614efb2df139
+langcode: en
+status: true
+dependencies: {  }
+id: rice
+label: Rice
+description: 'Create a Rice Product.'
+variationType: rice
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

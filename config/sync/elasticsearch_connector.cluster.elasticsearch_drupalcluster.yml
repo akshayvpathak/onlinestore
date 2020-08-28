@@ -1,0 +1,14 @@
+uuid: 2549913c-4d89-4fb2-a60f-cc9de05b790c
+langcode: en
+status: '1'
+dependencies: {  }
+cluster_id: elasticsearch_drupalcluster
+name: 'elasticsearch drupalcluster'
+url: 'http://localhost:9200'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 0
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '10'

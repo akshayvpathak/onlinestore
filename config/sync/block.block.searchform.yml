@@ -1,0 +1,21 @@
+uuid: 975d6067-b782-408a-ac46-d925f870241c
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bootstrap_barrio_subtheme
+id: searchform
+theme: bootstrap_barrio_subtheme
+region: header_two
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

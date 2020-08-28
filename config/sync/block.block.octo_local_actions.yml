@@ -1,0 +1,20 @@
+uuid: f3d7e102-e557-4967-9cf0-b9dae85057d6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - octo
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: octo_local_actions
+theme: octo
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

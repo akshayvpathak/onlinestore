@@ -1,0 +1,24 @@
+uuid: 7082bfb6-784f-449f-b88b-99746dca2ba9
+langcode: en
+status: true
+dependencies:
+  module:
+    - elasticsearch_connector
+id: elasticsearch_drupalserver
+name: 'elasticsearch drupalserver'
+description: 'this is the elasticsearch drupal server '
+backend: elasticsearch
+backend_config:
+  cluster_settings:
+    cluster: elasticsearch_drupalcluster
+  fuzziness: auto
+  scheme: http
+  host: localhost
+  port: '9200'
+  path: ''
+  excerpt: false
+  retrieve_data: false
+  highlight_data: false
+  http_method: AUTO
+  autocorrect_spell: true
+  autocorrect_suggest_words: true

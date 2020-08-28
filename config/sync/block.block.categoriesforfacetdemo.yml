@@ -1,0 +1,23 @@
+uuid: c6b01af8-ee75-4c38-9bbf-439d1d04cd44
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.facet_cat
+  module:
+    - facets
+  theme:
+    - commerce_bootstrap
+id: categoriesforfacetdemo
+theme: commerce_bootstrap
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:facet_cat'
+settings:
+  id: 'facet_block:facet_cat'
+  label: 'Categories for facet demo'
+  provider: facets
+  label_display: visible
+  block_id: categoriesforfacetdemo
+visibility: {  }

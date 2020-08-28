@@ -1,0 +1,23 @@
+uuid: 3d439b9e-6d29-43d8-9197-ff05a3b268f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rice
+    - field.storage.commerce_product.field_description
+  module:
+    - text
+id: commerce_product.rice.field_description
+field_name: field_description
+entity_type: commerce_product
+bundle: rice
+label: Description
+description: 'Enter the Product Description'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

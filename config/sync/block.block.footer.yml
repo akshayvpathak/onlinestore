@@ -1,0 +1,25 @@
+uuid: d770f089-434e-45be-9bd3-96ddc7e2659f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9c839811-f8c8-4dda-8024-1f2df4290956'
+  module:
+    - block_content
+  theme:
+    - twig
+id: footer
+theme: twig
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:9c839811-f8c8-4dda-8024-1f2df4290956'
+settings:
+  id: 'block_content:9c839811-f8c8-4dda-8024-1f2df4290956'
+  label: footer
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

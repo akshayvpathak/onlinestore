@@ -1,0 +1,27 @@
+uuid: 7ffd51a2-9dc1-40d5-9afc-06257d977b42
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rice
+    - field.storage.commerce_product.field_product_reference
+id: commerce_product.rice.field_product_reference
+field_name: field_product_reference
+entity_type: commerce_product
+bundle: rice
+label: 'More Like This'
+description: 'Product Reference'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      rice: rice
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

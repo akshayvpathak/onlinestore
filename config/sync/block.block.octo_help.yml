@@ -1,0 +1,22 @@
+uuid: 65dc2808-d9e9-44d5-b350-ed89bc1ccf6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - octo
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: octo_help
+theme: octo
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

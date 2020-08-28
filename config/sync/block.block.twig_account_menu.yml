@@ -1,0 +1,27 @@
+uuid: 43cadd34-6f8c-480a-9e2f-8129cff3e457
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - twig
+_core:
+  default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
+id: twig_account_menu
+theme: twig
+region: header_three
+weight: -9
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

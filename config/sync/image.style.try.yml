@@ -1,0 +1,14 @@
+uuid: dca1dd84-1815-4fa4-8580-fd17fbdf8fb2
+langcode: en
+status: true
+dependencies: {  }
+name: try
+label: try
+effects:
+  c773ceb5-39e9-4669-82bd-f6e8b8f28f1e:
+    uuid: c773ceb5-39e9-4669-82bd-f6e8b8f28f1e
+    id: image_resize
+    weight: 1
+    data:
+      width: 853
+      height: 489

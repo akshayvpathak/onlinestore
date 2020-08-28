@@ -1,0 +1,62 @@
+uuid: 7d33ed58-873a-4633-8a66-383f60a11931
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.rice
+    - core.entity_view_mode.commerce_product_variation.product_variaton_teaser
+    - field.field.commerce_product_variation.rice.attribute_weight
+    - field.field.commerce_product_variation.rice.field_image
+    - field.field.commerce_product_variation.rice.field_old_price
+  module:
+    - commerce_price
+    - field_layout
+    - image
+    - layout_builder
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: commerce_product_variation.rice.product_variaton_teaser
+targetEntityType: commerce_product_variation
+bundle: rice
+mode: product_variaton_teaser
+content:
+  field_image:
+    type: image
+    weight: 1
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 2
+    region: content
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  title:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  attribute_weight: true
+  field_old_price: true
+  langcode: true
+  list_price: true
+  product_id: true
+  search_api_excerpt: true
+  sku: true

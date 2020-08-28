@@ -1,0 +1,174 @@
+uuid: e74bac8c-9282-4874-b08b-991c228d9690
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rice
+    - field.field.commerce_product.rice.field_brand
+    - field.field.commerce_product.rice.field_categories
+    - field.field.commerce_product.rice.field_description
+    - field.field.commerce_product.rice.field_disclaimer
+    - field.field.commerce_product.rice.field_discount_percentage
+    - field.field.commerce_product.rice.field_key_features
+    - field.field.commerce_product.rice.field_marketed_by
+    - field.field.commerce_product.rice.field_product_reference
+    - field.field.commerce_product.rice.field_seller
+    - field.field.commerce_product.rice.field_shelf_life
+    - field.field.commerce_product.rice.field_unit
+  module:
+    - address
+    - commerce
+    - field_layout
+    - inline_entity_form
+    - layout_discovery
+    - physical
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: commerce_product.rice.default
+targetEntityType: commerce_product
+bundle: rice
+mode: default
+content:
+  field_brand:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_categories:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description:
+    weight: 10
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_disclaimer:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_discount_percentage:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_key_features:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_marketed_by:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_product_reference:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_seller:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_shelf_life:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_unit:
+    weight: 6
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 1
+    region: content
+    third_party_settings: {  }
+  stores:
+    type: commerce_entity_select
+    weight: 0
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  variations:
+    type: inline_entity_form_complex
+    weight: 5
+    region: content
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  uid: true

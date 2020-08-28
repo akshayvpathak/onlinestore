@@ -1,0 +1,22 @@
+uuid: 602bc2df-5d3b-4d0f-8183-0feb2d9c1741
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - octo
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: octo_content
+theme: octo
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

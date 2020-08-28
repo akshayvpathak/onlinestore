@@ -1,0 +1,22 @@
+uuid: f8b6d352-95af-4f55-a1aa-bb978be841a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart_flyout
+  theme:
+    - bootstrap_barrio_subtheme
+id: bootstrap_barrio_subtheme_cart
+theme: bootstrap_barrio_subtheme
+region: header_four
+weight: -4
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart_flyout
+  label_display: '0'
+  use_quantity_count: 0
+  dropdown: true
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 62454e41-c98d-4725-87a2-b6f450dea9ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - octo
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: octo_branding
+theme: octo
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

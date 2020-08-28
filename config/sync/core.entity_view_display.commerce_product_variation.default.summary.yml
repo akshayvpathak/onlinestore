@@ -1,0 +1,115 @@
+uuid: 193e643e-0055-4159-bd80-06e3f52a536a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - core.entity_view_mode.commerce_product_variation.summary
+  enforced:
+    module:
+      - commerce_checkout
+  module:
+    - commerce_price
+    - field_layout
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          af743c30-1e1c-479e-a246-894c2e97a96e:
+            uuid: af743c30-1e1c-479e-a246-894c2e97a96e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_product_variation:default:title'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          58fe533c-23e2-46da-a989-a899be6fe5b9:
+            uuid: 58fe533c-23e2-46da-a989-a899be6fe5b9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_product_variation:default:list_price'
+              formatter:
+                label: above
+                type: commerce_price_default
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          01afcb49-1ee1-4a35-8220-baa4f698e624:
+            uuid: 01afcb49-1ee1-4a35-8220-baa4f698e624
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:commerce_product_variation:default:product_id'
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+_core:
+  default_config_hash: jmDRQILFIWJUS3jS-qLF10aGc1IXnvFEBizwJl94FfU
+id: commerce_product_variation.default.summary
+targetEntityType: commerce_product_variation
+bundle: default
+mode: summary
+content:
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  product_id:
+    type: entity_reference_label
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  price: true
+  search_api_excerpt: true
+  sku: true

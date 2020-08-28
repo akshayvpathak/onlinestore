@@ -1,0 +1,22 @@
+uuid: 4192b88c-080c-4ff5-8b79-8701dd9cde94
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - twig
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: twig_content
+theme: twig
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

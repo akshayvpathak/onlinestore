@@ -1,0 +1,12 @@
+uuid: 919b234e-2066-47a0-ab94-22a462c27340
+langcode: en
+status: true
+dependencies: {  }
+id: ghee_vanaspati
+label: 'Ghee & Vanaspati'
+description: 'Add Ghee and vanaspati type product'
+variationType: ghee_vanaspati
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false
